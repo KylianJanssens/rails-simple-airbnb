@@ -1,16 +1,30 @@
-<h1>All our flats</h1>
-<div></div>
-<ul>
-  <% @flats.each do |flat| %>
-    <li>
-      <%= flat.name %>
-      <%= flat.address %>
-      <%= flat.description %>
-      <%= link_to "More info...", flat_path(flat) %>
-      <%= link_to "edit", edit_flat_path(flat) %>
-      <%= link_to "Remove", flat_path(flat), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-    </li>
-  <% end %>
-</ul>
+<div class="container">
+<h1>All our flats </h1>
+<h2> All (<%= @flats.count %>) flats. </h2>
+  <div class="cards">
+    <% @flats.each do |flat| %>
+      <div class="card-flat">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+          <div class="card-flat-info">
+          <%= flat.name %>
+          <%= flat.address %>
 
-<%= link_to "Add flat", new_flat_path %>
+            <div class="card-flat-numbers">
+              <%= flat.number_of_guests %>
+              <%= flat.price_per_night %>
+            </div>
+
+          <div class="card-flat-actions">
+            <%= link_to "More info...", flat_path(flat) %>
+            <%= link_to "edit", edit_flat_path(flat) %>
+            <%= link_to "Remove", flat_path(flat), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+          </div>
+
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <%= link_to "Add flat", new_flat_path %>
+
+</div>

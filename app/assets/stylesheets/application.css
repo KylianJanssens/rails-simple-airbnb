@@ -19,3 +19,27 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
  }
+
+ .card-flat {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-flat > img {
+  height: 100px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-flat-info {
+
+}
+
+.card-flat-numbers {
+
+}
+
+.card-flat-actions {
+  
+}

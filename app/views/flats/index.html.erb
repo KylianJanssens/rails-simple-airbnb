@@ -1,1 +1,16 @@
 <h1>All our flats</h1>
+<div></div>
+<ul>
+  <% @flats.each do |flat| %>
+    <li>
+      <%= flat.name %>
+      <%= flat.address %>
+      <%= flat.description %>
+      <%= link_to "More info...", flat_path(flat) %>
+      <%= link_to "edit", edit_flat_path(flat) %>
+      <%= link_to "Remove", flat_path(flat), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Add flat", new_flat_path %>

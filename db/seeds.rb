@@ -6,15 +6,19 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-10.times do
+puts "cleaning database"
+Flat.destroy_all
+
+puts "Creating flat"
+
+13.times do
   flat = Flat.new(
-    name:    Faker::Book.title,
-    address: ,
-    description: Faker::Restaurant.description,
-    price_per_night: ,
-    number_of_guests: ,
+    name:    Faker::Company.name,
+    address: Faker::Address.city,
+    description: Faker::Food.description,
+    price_per_night: (25..200).to_a.sample,
+    number_of_guests: (1..6).to_a.sample
   )
-  article.save!
+  puts "Flat with id #{flat.id} has been created"
+  flat.save!
 end
-
-

@@ -14,32 +14,52 @@
  *= require_self
  */
 
- .cards {
+.cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
- }
-
- .card-flat {
-  overflow: hidden;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  grid-gap: 20px;
 }
 
-.card-flat > img {
-  height: 100px;
+.card-flat {
+  overflow: hidden;
+  background: white;
+  border-radius: 2px;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2)
+}
+
+.card-flat>img {
+  height: 180px;
   width: 100%;
   object-fit: cover;
 }
 
 .card-flat-info {
-
+  padding: 20px;
+  background-color: #F8F9FA;
+  height: 100%;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #dbdbdb99;
 }
 
-.card-flat-numbers {
+.card-flat-info h2 {
+  font-size: large;
+}
 
+
+.card-flat-numbers {
+  display: flex;
 }
 
 .card-flat-actions {
-  
+  background-color: white;
+  justify-content: space-around;
+  display: flex;
+  padding: 5px;
+  margin: 5px 0;
 }

@@ -17,7 +17,8 @@ puts "Creating flat"
     address: Faker::Address.city,
     description: Faker::Food.description,
     price_per_night: (25..200).to_a.sample,
-    number_of_guests: (1..6).to_a.sample
+    number_of_guests: (1..6).to_a.sample,
+    image_url: "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg"
   )
   puts "Flat with id #{flat.id} has been created"
   flat.save!

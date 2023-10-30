@@ -1,0 +1,30 @@
+<div class="card-flat">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+    <div class="card-flat-info">
+      <h2><%= flat.name %></h2>
+      <p><%= flat.address %></p>
+
+      <div class="card-flat-numbers">
+        <div class="d-flex align-items-center">
+          <i class="fa-solid fa-people-roof" style="color: #000000;"></i>
+          <p class="d-flex align-items-center m-0"> <strong> <%= flat.number_of_guests %></strong></p>
+        </div>
+
+        <div class="d-flex align-items-center ms-3">
+          <p class="m-0"><strong>€</strong></p>
+          <p class="m-0"><strong><%= flat.price_per_night %></strong></p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="card-flat-actions">
+      <%= link_to "More info", flat_path(flat) %>
+      <%= link_to edit_flat_path(flat), class: "link-warning" do %>
+        Edit
+      <% end %>
+      <%= link_to flat_path(flat), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "link-danger" do %>
+      Remove
+      <% end %>
+    </div>
+</div>

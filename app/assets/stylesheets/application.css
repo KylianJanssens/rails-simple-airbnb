@@ -82,3 +82,19 @@
   object-fit: cover;
 }
 
+.margin-top-negative {
+  margin-top: -60px;
+}
+
+.flat-show-card {
+  width: 100%;
+  background-color: rgb(254 254 254);
+  height: auto;
+  border-radius: 2px;
+  box-shadow: 0 2px 2px 0 #00000030;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}

@@ -4,6 +4,11 @@ class FlatsController < ApplicationController
     @flats = Flat.all
   end
 
+  def search
+    query = params[:query]
+    @flats = Flat.where("name LIKE ?", "%#{query}%")
+  end
+
   def show
     @flat = Flat.find(params[:id])
   end

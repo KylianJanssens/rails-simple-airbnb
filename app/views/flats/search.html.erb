@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Search Results</h1>
+  <% if @flats.any? %>
+      <div class="cards">
+        <% @flats.each do |flat| %>
+          <%= render "card_flat", flat: flat %>
+        <% end %>
+      </div>
+  <% else %>
+    <p>No flats found matching your search criteria.</p>
+  <% end %>
+</div>
